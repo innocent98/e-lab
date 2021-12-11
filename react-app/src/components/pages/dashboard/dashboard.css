@@ -1,0 +1,52 @@
+.dashboard-g{
+    background-color: #F5FFFA;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 100vh auto;
+}
+
+.dashboard-h{
+    border-bottom: 1px solid #000;
+}
+
+.top{
+    padding-top: 10px;
+    margin-right: 15%;
+    margin-left: 20%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.notification-icon{
+    position:relative;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dashboard{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+ .welc{
+    margin-top: 5px;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.user{
+    font-family: 'Yeseva One', cursive;
+    font-size: 25px;
+}
+
+.books{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 40px;
+}
