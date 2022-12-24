@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 
 
 //REGISTER PUBLISHER
-router.post("/_register", async (req, res) => {
+router.post("/_register", async(req, res) => {
     try {
         //generate new password
         const salt = await bcrypt.genSalt(10);
@@ -29,13 +29,14 @@ router.post("/_register", async (req, res) => {
 });
 
 //LOGIN PUBLISHER
-router.post("/login", async (req, res) => {
+router.post("/login", async(req, res) => {
     try {
         const publisher = await Publisher.findOne({ email: req.body.email });
-        if (!publisher || !bcrypt.compareSync(req.body.password, publisher.password)){
+        if (!publisher || !bcrypt.compareSync(req.body.password, publisher.password)) {
             res.status(400).json("Email and password is incorrect! Kindly check and try again");
         } else {
-        res.status(200).json(publisher)};
+            res.status(200).json(publisher)
+        };
     } catch (err) {
         res.status.json(err);
     }

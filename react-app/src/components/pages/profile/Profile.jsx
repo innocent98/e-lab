@@ -3,6 +3,7 @@ import SideBar from "../../sidebar/SideBar";
 import React, { useContext } from "react";
 import { Context } from "../../../context/Context";
 import { Link } from "react-router-dom";
+
 export default function Profile() {
   const { user } = useContext(Context);
 

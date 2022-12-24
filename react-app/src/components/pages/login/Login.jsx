@@ -8,11 +8,10 @@ import axios from "axios";
 import { useContext, useRef } from "react";
 
 export default function Login() {
-  const userRef = useRef();
-  const passwordRef = useRef();
+  const email = useRef();
+  const password = useRef();
   const { dispatch, isFetching } = useContext(Context);
   const [error, setError] = useState("");
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,8 +19,8 @@ export default function Login() {
     dispatch({ type: "LOGIN_START" });
     try {
       const res = await axios.post("_auth/login", {
-        email: userRef.current.value,
-        password: passwordRef.current.value,
+        email: email.current.value,
+        password: password.current.value,
       });
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {
@@ -48,7 +47,11 @@ export default function Login() {
         <p className="login">
           <b>Login</b>
         </p>
-        <form className="row g-3" onSubmit={handleSubmit} style={{left: "-4px", top: "-10px"}}>
+        <form
+          className="row g-3"
+          onSubmit={handleSubmit}
+          style={{ left: "-4px", top: "-10px" }}
+        >
           <div className="row-md-6">
             <label htmlFor="inputEmail4" className="form-label">
               Email
@@ -57,7 +60,7 @@ export default function Login() {
               type="email"
               className="form-control"
               id="inputEmail4"
-              ref={userRef}
+              ref={email}
             />
           </div>
           <div className="row-md-6">
@@ -71,19 +74,24 @@ export default function Login() {
               id="inputPassword4"
               value={pwd}
               onChange={(e) => setPwd(e.target.value)}
-              ref={passwordRef}
+              ref={password}
             />
             <img
               className="l-sp"
               title={isRevealPwd ? "Hide password" : "Show password"}
-              src={isRevealPwd ? hidePwdImg : showPwdImg} alt=""
-              style={{top: "-30px"}}
+              src={isRevealPwd ? hidePwdImg : showPwdImg}
+              alt=""
+              style={{ top: "-30px" }}
               onClick={() => setIsRevealPwd((prevState) => !prevState)}
             />
           </div>
 
           <div className="col-12">
-            <button type="submit" className="login-button btn-primary" disabled={isFetching}>
+            <button
+              type="submit"
+              className="login-button btn-primary"
+              disabled={isFetching}
+            >
               Login
             </button>
             <div className="member">
@@ -101,7 +109,9 @@ export default function Login() {
           </div>
         </form>
         {error && (
-          <span style={{ color: "red", textAlign: "center", marginTop: "20px" }}>
+          <span
+            style={{ color: "red", textAlign: "center", marginTop: "20px" }}
+          >
             Email and password is incorrect! Kindly check and try again
           </span>
         )}

@@ -160,7 +160,7 @@ router.put("/:id/save", async (req, res) => {
     if (!user.library.includes(req.params.id)) {
       await user.updateOne({ $push: { library: req.params.id } });
       for (let i = 0; i <= Infinity; i++) {
-        await book.updateOne({ $inc: { downloadCount: ++i } });
+        await book.updateOne({ $inc: { downloadCount: ++i } }); 
         break;
       }
       for (let i = 0; i <= Infinity; i++) {

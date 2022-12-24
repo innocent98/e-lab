@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 
 export default function Register() {
   const [isRevealPwd, setIsRevealPwd] = useState(false);
-  // const [value, setValue] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -92,8 +91,6 @@ export default function Register() {
               className="form-control"
               international
               defaultCountry="NG"
-              // value={value}
-              // onChange={setValue}
               value={phoneNumber}
               onChange={setPhoneNumber}
             />

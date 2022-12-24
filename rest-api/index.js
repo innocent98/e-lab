@@ -12,55 +12,50 @@ dotenv.config();
 
 //Database connection
 mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: true,
-  })
-  .then(() => console.log("Database connected!"))
-  .catch((err) => console.log(err));
-
+    .connect(process.env.MONGO_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+    .then(() => console.log("Database connected!"))
+    .catch((err) => console.log(err));
 
 //Creating path and route for images and files storage
-  app.use("/images", express.static(path.join(__dirname, "public/images")));
-
+app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    if (
-      file.mimetype === "application/pdf" ||
-      file.mimetype === "application/txt"
-    ) {
-      cb(null, "public/files");
-    }
-    if (
-        file.mimetype === "image/jpeg" ||
-        file.mimetype === "image/jpg" ||
-        file.mimetype === "image/png" ||
-        file.mimetype === "image/jfif"
-      ) {
-        cb(null, "public/images");
-      }
-  },
-  filename: (req, file, cb) => {
-    cb(null, req.body.name);
-  },
+    destination: (req, file, cb) => {
+        if (
+            file.mimetype === "application/pdf" ||
+            file.mimetype === "application/txt"
+        ) {
+            cb(null, "public/files");
+        }
+        if (
+            file.mimetype === "image/jpeg" ||
+            file.mimetype === "image/jpg" ||
+            file.mimetype === "image/png" ||
+            file.mimetype === "image/jfif"
+        ) {
+            cb(null, "public/images");
+        }
+    },
+    filename: (req, file, cb) => {
+        cb(null, req.body.name);
+    },
 });
 
 const upload = multer({ storage: storage });
 app.post("/update", upload.array("file", 10), (req, res) => {
-  res.status(200).json("file has been uploaded");
+    res.status(200).json("file has been uploaded");
 });
 
 //middleswares
-app.use(express.json()); //its a body parser when you make post request, it will parser it
+app.use(express.json()); //its a body parser when you make post request, it will parse it
 app.use(helmet());
 app.use(morgan("common"));
 
 app.use(router);
 
-
 app.listen(process.env.PORT, () => {
-  console.log(`Server is up and running`);
+    console.log(`Server is up and running`);
 });
