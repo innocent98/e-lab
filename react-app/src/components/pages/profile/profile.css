@@ -90,7 +90,7 @@
 }
 
 .head-title{
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: -15px;
     line-height: 1px;
     position: relative;
@@ -101,6 +101,7 @@
 
 .head-main-t{
     padding-top: 10px;
+    text-align: left;
 }
 
 .title-hr h3{
@@ -131,8 +132,12 @@
 
 .details{
     padding: 20px;
-    font-size: 18px;
+    font-size: 14px;
     display: flex;
     flex-direction: column;
+}
+
+.details-content{
+  font-size: 18px;
 }
 

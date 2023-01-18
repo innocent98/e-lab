@@ -21,7 +21,7 @@ export default function Register() {
     e.preventDefault();
     setError(false);
     try {
-      const res = await axios.post("/_auth/_register", {
+      const res = await axios.post("http://elabapi.forezone.buzz/_auth/_register", {
         firstName,
         lastName,
         email,

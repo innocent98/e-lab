@@ -97,7 +97,8 @@
   border-radius: 20px;
   background-color: #2e8b57;
   color: #ffff;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  width: 50%;
 }
 
 .edit-profile-button:hover {

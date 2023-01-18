@@ -25,7 +25,7 @@ export default function Payment() {
       <div className="account-history">
         <div className="title">
           <h3>Your Account History</h3>
-          Total balance
+          <h4>Total balance</h4>
           <p className="balance">
             <b>
               {user.currency}
@@ -36,11 +36,11 @@ export default function Payment() {
 
         <div className="available-balance">
           <div className="balanceContainer">
-            Available balance: {user.currency}{user.availableBalance}
-            <p className="balance">
-              |
-            </p>
-            Total withdraw: {user.currency}{user.totalWithdraw}
+            Available balance: {user.currency}
+            {user.availableBalance}
+            <div className="divider"></div>
+            Total withdraw: {user.currency}
+            {user.totalWithdraw}
           </div>
           <Link to="/withdraw">
             <button className="withdraw">Withdraw</button>

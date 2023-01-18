@@ -12,9 +12,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     const fetchBooks = async () => {
-      const res = await axios.get(
-        "/upload/my-uploads/" + user._id
-      );
+      const res = await axios.get("http://elabapi.forezone.buzz/upload/my-uploads/" + user._id);
       SetBooks(res.data);
     };
     fetchBooks();
@@ -22,7 +20,9 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard-g">
-      <SideBar />
+      <div className="sdbr">
+        <SideBar />
+      </div>
       <div className="dashboard-h">
         <div className="top">
           <p className="dashboard">
@@ -38,13 +38,18 @@ export default function Dashboard() {
 
       <div className="welc">
         <p>
-          <span className="user">Welcome back {user.firstName}!</span> Your
-          current account balance is <b>{user.currency}{user.availableBalance}.</b> This page contain the
-          list of books you've uploaded. You have <b>{user.uploads}</b> total book(s) Uploaded
+          <span className="user">Welcome back {user.firstName}!</span> <br />{" "}
+          Your current account balance is{" "}
+          <b>
+            {user.currency}
+            {user.availableBalance}.
+          </b>{" "}
+          This page contain the list of books you've uploaded. You have{" "}
+          <b>{user.uploads}</b> total book(s) Uploaded
         </p>
       </div>
       <div className="books">
-        {books.map(b => (
+        {books.map((b) => (
           <Dash key={b._id} book={b} />
         ))}
       </div>

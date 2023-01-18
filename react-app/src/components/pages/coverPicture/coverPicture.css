@@ -29,3 +29,34 @@
     left: 0;
     color: #000;
   }
+
+  .cover{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cover-pic-u{
+    width: 30%;
+  }
+
+  .profile-button{
+    width: 60%;
+  }
+
+  @media screen and (max-width:768px) {
+    .cover-pic-u{
+      width: 70%;
+    }
+    .profile-button{
+      width: 40%;
+    }
+  }
+  
+  @media screen and (max-width:480px) {
+    .cover-pic-u{
+      width: 100%;
+    }
+  }

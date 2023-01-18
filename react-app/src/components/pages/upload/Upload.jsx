@@ -16,9 +16,11 @@ export default function Upload() {
   const [email, setEmail] = useState("");
   const { user } = useContext(Context);
   const [success, setSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true)
     const newUpload = {
       firstName: user.firstName,
       bookTitle,
@@ -36,7 +38,7 @@ export default function Upload() {
       data.append("file", uploadBook);
       newUpload.uploadBook = filename;
       try {
-        await axios.post("/update", data);
+        await axios.post("http://elabapi.forezone.buzz/update", data);
       } catch (err) {}
     }
     if (bookCover) {
@@ -46,12 +48,13 @@ export default function Upload() {
       data.append("file", bookCover);
       newUpload.bookCover = filename;
       try {
-        await axios.post("/update", data);
+        await axios.post("http://elabapi.forezone.buzz/update", data);
       } catch (err) {}
     }
     try {
-      const res = await axios.post("/upload", newUpload);
+      const res = await axios.post("http://elabapi.forezone.buzz/upload", newUpload);
       setSuccess(true);
+      setIsLoading(false)
       window.location.reload("/upload" + res.data._id);
     } catch (error) {}
   };
@@ -189,7 +192,7 @@ export default function Upload() {
         </div>
 
         <div className="col-md-4">
-          <div className="form-check">
+          <div className="form-chec">
             <input
               className="form-check-input"
               type="checkbox"
@@ -202,8 +205,8 @@ export default function Upload() {
             </label>
           </div>
         </div>
-        <button className="submit-button" type="submit">
-          Upload
+        <button disabled={isLoading} className="submit-button" type="submit">
+          {isLoading ? "Please wait..." : "Upload"}
         </button>
       </form>
       {success && (

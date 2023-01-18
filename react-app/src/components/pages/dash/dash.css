@@ -1,22 +1,32 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.dash{
-    display: flex;
-    margin-left: 40px;
-    padding-left: 0;
+.dash {
+  /* margin: 10px; */
+  gap: 10px;
+  height: 300px;
+  width: 200px;
+  margin-bottom: 20px;
 }
 
-.row-md{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 10px 0;
+.book > img {
+  height: 280px;
+  width: 100%;
 }
 
-.book > img{
-    height: 350px;
-    width: 250px;
+.sold {
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .dash {
+    height: 280px;
+    width: 180px;
+  }
+
+  .book > img {
+    height: 250px;
+  }
 }

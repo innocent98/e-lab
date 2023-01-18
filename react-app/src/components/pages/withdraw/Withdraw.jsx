@@ -15,7 +15,7 @@ export default function Withdraw() {
     e.preventDefault();
     dispatch({ type: "UPDATE_START" });
     try {
-      const res = await axios.put("publishers/withdraw/" + user._id, {
+      const res = await axios.put("http://elabapi.forezone.buzz/publishers/withdraw/" + user._id, {
         publisherId: user._id,
         withdraw,
       });
@@ -44,41 +44,52 @@ export default function Withdraw() {
         </div>
       </div>
 
-      <div className="containerW">
-        <h3 className="withdrawT">Withdraw</h3>
-        <form className="row g-3" onSubmit={handleSubmit}>
-          <div className="col-md-5">
-            <label htmlFor="inputFirstName" className="form-label">
-              Amount to withdraw
-            </label>
-            <input
-              type="name"
-              className="form-control"
-              id="inputEmail4"
-              placeholder="input amount to withdraw i.e: 2000"
-              onChange={(e) => setWithdraw(e.target.value)}
-            />
-          </div>
-          <button type="submit" className="withdrawButton btn-primary" id="liveToastBtn">
-            Withdraw
-          </button>
-        </form>
-        {error && (
-          <span
-            style={{ color: "red", textAlign: "center", marginTop: "35px" }}
-          >
-            Available balance is not sufficent to perform this operation
-          </span>
-        )}
-        {success && (
-          <span
-            className="profileSuccess"
-            style={{ color: "green", textAlign: "center", margin: "5%", paddingTop: "10px" }}
-          >
-            Withdrawal successful! Money will be deposited into
-            your account in few hours.
-          </span>
-        )}
+      <div className="wCon">
+        <div className="containerW">
+          <h3 className="withdrawT">Withdraw</h3>
+          <form className="row g-3" onSubmit={handleSubmit}>
+            <div className="col-md-5">
+              <label htmlFor="inputFirstName" className="form-label">
+                Amount to withdraw
+              </label>
+              <input
+                type="name"
+                className="form-control"
+                id="inputEmail4"
+                placeholder="input amount to withdraw i.e: 2000"
+                onChange={(e) => setWithdraw(e.target.value)}
+              />
+            </div>
+            <button
+              type="submit"
+              className="withdrawButton btn-primary"
+              id="liveToastBtn"
+            >
+              Withdraw
+            </button>
+          </form>
+          {error && (
+            <span
+              style={{ color: "red", textAlign: "center", marginTop: "35px" }}
+            >
+              Available balance is not sufficent to perform this operation
+            </span>
+          )}
+          {success && (
+            <span
+              className="profileSuccess"
+              style={{
+                color: "green",
+                textAlign: "center",
+                margin: "5%",
+                paddingTop: "10px",
+              }}
+            >
+              Withdrawal successful! Money will be deposited into your account
+              in few hours.
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );

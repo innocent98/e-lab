@@ -29,6 +29,13 @@
   font-weight: 500;
 }
 
+.wCon{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .containerW{
   background-color: transparent;
   position: relative;
@@ -37,6 +44,7 @@
   flex-direction: column;
   align-items: center;
   height: 80%;
+  width: 50%;
   padding-top: 20px;
 }
 

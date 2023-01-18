@@ -72,22 +72,22 @@ export default function Profile() {
 
         <div className="details">
           <div className="details-title">
-            Address <i className="fas fa-angle-right"></i>
-            <div className="details-content">{user.address}</div>
+            Address 
           </div>
+            <div className="details-content">{user.address}</div>
           <hr />
           <div className="details-title">
-            Country <i className="fas fa-angle-right"></i>
+            Country 
             <div className="details-content">{user.country}</div>
           </div>
           <hr />
           <div className="details-title">
-            Phone Number <i className="fas fa-angle-right"></i>
+            Phone Number 
             <div className="details-content">{user.phoneNumber}</div>
           </div>
           <hr />
           <div className="details-title">
-            Account Details <i className="fas fa-angle-right"></i>
+            Account Details 
             <div className="details-content">
               Bank: {user.bankName} <br />
               Name: {user.accountName} <br />

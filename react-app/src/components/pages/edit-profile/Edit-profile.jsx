@@ -20,7 +20,7 @@ export default function EditProfile() {
     e.preventDefault();
     dispatch({ type: "UPDATE_START" });
     try {
-      const res = await axios.put("/publishers/" + user._id, {
+      const res = await axios.put("http://elabapi.forezone.buzz/publishers/" + user._id, {
         publisherId: user._id,
         address,
         accountName,

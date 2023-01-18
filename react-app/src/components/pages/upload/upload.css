@@ -49,8 +49,15 @@
 }
 
 .row {
-  left: 8%;
-  top: 0;
+  width: 100%;
+  padding: 0 20px;
+  display: flex !important;
+}
+
+.col-md-4 {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 80%;
 }
 
 .col-md-4 > textarea {
@@ -71,6 +78,7 @@
 
 .col-md-4 > label {
   height: 50px;
+  margin-bottom: 20px;
 }
 
 .submit-button {
@@ -79,7 +87,14 @@
   border-radius: 20px;
   background-color: #2e8b57;
   color: #ffff;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  width: 60%;
+  margin-top: 40px;
+}
+
+.submit-button:disabled {
+  cursor: not-allowed;
+  background-color: #2e8b56c5;
 }
 
 .submit-button:hover {

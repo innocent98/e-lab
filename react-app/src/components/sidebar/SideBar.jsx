@@ -15,7 +15,41 @@ export default function SideBar() {
   return (
     <div>
       <Menu>
+      <div className="dropdown">
+          <Navbar
+            className="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {user ? (
+              <img className="cover-pic" src={user.coverPicture ? PF+user.coverPicture : PF + "person/person3.png"} alt="" />
+            ) : (
+              <></>
+            )}
+
+            <span className="user-name">{user.firstName}</span>
+          </Navbar>
+          {/* <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a className="dropdown-item" href="/profile">
+                Profile
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="/settings">
+                settings
+              </a>
+            </li>
+            <li className="dropdown-item" onClick={handleLogout}>
+              {user && "Logout"}
+            </li>
+          </ul> */}
+        </div>
         <p className="publisher">Publisher Id: {user._id}</p>
+        <hr />
+        
         <br />
         <a className="menu-item" href="/dashboard">
           <span className="side">Home</span>
@@ -41,39 +75,19 @@ export default function SideBar() {
         </a>
         <br />
 
-        <hr />
-        <div className="dropdown">
-          <Navbar
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            {user ? (
-              <img className="cover-pic" src={user.coverPicture ? PF+user.coverPicture : PF + "person/person3.png"} alt="" />
-            ) : (
-              <></>
-            )}
+        <a className="menu-item" href="/settings">
+          <span className="side">Settings</span>
+          <i className="bi bi-settings"></i>
+        </a>
+        <br />
 
-            <span className="user-name">{user.firstName}</span>
-          </Navbar>
-          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li>
-              <a className="dropdown-item" href="/profile">
-                Profile
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="/settings">
-                settings
-              </a>
-            </li>
-            <li className="dropdown-item" onClick={handleLogout}>
-              {user && "Logout"}
-            </li>
-          </ul>
-        </div>
+        <li className="menu-item" onClick={handleLogout}>
+          <span className="side">{user && "Logout"}</span>
+          <i className="bi fas fa-sign-out-alt"></i>
+        </li>
+        <br />
+
+        
       </Menu>
     </div>
   );

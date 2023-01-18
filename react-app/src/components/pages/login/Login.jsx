@@ -18,7 +18,7 @@ export default function Login() {
     setError(false);
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("_auth/login", {
+      const res = await axios.post("http://elabapi.forezone.buzz/_auth/login", {
         email: email.current.value,
         password: password.current.value,
       });

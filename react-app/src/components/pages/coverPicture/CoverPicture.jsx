@@ -23,14 +23,14 @@ export default function CoverPicture() {
       data.append("file", coverPicture);
       updateUser.coverPicture = filename;
       try {
-        await axios.post("/update", data);
+        await axios.post("http://elabapi.forezone.buzz/update", data);
       } catch (err) {
         console.log(err)
       }
     }
     dispatch({ type: "UPDATE_START" });
     try {
-      const res = await axios.put("/publishers/" + user._id, updateUser);
+      const res = await axios.put("http://elabapi.forezone.buzz/publishers/" + user._id, updateUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
       window.location.replace("/profile");
@@ -54,7 +54,7 @@ export default function CoverPicture() {
         </div>
       </div>
 
-      <div className="">
+      <div className="cover">
         <div className="cover-pic-u">
           <form
             action=""
