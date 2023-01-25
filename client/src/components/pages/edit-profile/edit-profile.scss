@@ -1,0 +1,109 @@
+@import "../../../global.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.profile {
+  background-color: $primary;
+  // height: 100vh;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .sdbr {
+    width: 100%;
+  }
+
+  .head-e {
+    border-bottom: 1px solid #000;
+    width: 100%;
+    .top-e {
+      padding-top: 12px;
+      margin-right: 16%;
+      margin-left: 20%;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+  }
+
+  .cover-pic-e {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .container {
+    padding: 30px;
+    margin-top: -30px;
+    background-color: #fff;
+    width: 30%;
+    height: auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 27px -1px rgba(0, 0, 0, 0.02);
+    -webkit-box-shadow: 0px 1px 27px -1px rgba(0, 0, 0, 0.02);
+    -moz-box-shadow: 0px 1px 27px -1px rgba(0, 0, 0, 0.02);
+    @include l {
+      width: 90%;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      .col-md-4 {
+        width: 100%;
+
+        .form-control {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          &:focus {
+            border-bottom: 1px solid lightgray !important;
+            box-shadow: none !important;
+            background-color: inherit;
+          }
+        }
+
+        .edit-profile-button {
+          padding: 5px 25px;
+          border: none;
+          border-radius: 8px;
+          background-color: $button;
+          color: #ffff;
+          font-size: 1.2rem;
+          font-family: $roboto;
+          width: 100%;
+          &:hover {
+            background-color: #306754;
+            transition: 1s ease-in;
+          }
+        }
+      }
+    }
+  }
+}
+
+.icon {
+  position: relative;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cover-pic-e img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+}

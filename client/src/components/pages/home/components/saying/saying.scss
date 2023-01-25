@@ -1,0 +1,47 @@
+@import "../../../../../global.scss";
+
+.saying {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+
+  h1 {
+    font-family: $lato;
+    font-weight: 700;
+    font-size: 48px;
+    @include mobile {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+    @include mobile {
+      flex-direction: column;
+      margin-top: 20px;
+      gap: 20px;
+    }
+    p {
+      font-family: $roboto;
+      font-size: 20px;
+      font-weight: 400;
+      @include mobile{font-size: 18px;}
+    }
+    h4 {
+      font-family: $roboto;
+      font-weight: 700;
+      font-size: 24px;
+      margin-top: 30px;
+      @include mobile {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../../global.scss";
+
+.home {
+  padding: 20px 40px;
+  margin: 0;
+  background-color: $primary;
+  overflow: hidden;
+  @include mobile {
+    padding: 20px;
+  }
+
+  .top {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile {
+      // flex-direction: column;
+      // align-items: flex-start;
+    }
+
+    .logo {
+      font-family: $lato;
+      font-size: 30px;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .loginBtn {
+        font-family: $roboto;
+        font-size: 20px;
+        color: $black;
+        cursor: pointer;
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+      .signupBtn {
+        font-family: $roboto;
+        font-size: 20px;
+        color: white;
+        background-color: $button;
+        padding: 8px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
