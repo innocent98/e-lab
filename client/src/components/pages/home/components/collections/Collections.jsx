@@ -12,72 +12,31 @@ const Collections = () => {
         <div className="wrapper">
           <div className="img">
             <img
-              src="assets/book/download1.jfif"
+              src="assets/book/1.jpeg"
               alt=""
               className="img-fluid"
             />
           </div>
           <div className="img">
             <img
-              src="assets/book/download2.jfif"
+              src="assets/book/2.jpeg"
               alt=""
               className="img-fluid"
             />
           </div>
           <div className="img">
             <img
-              src="assets/book/download3.jfif"
+              src="assets/book/3.jpeg"
               alt=""
               className="img-fluid"
             />
           </div>
           <div className="img">
-            <img src="assets/book/guitar.jpg" alt="" className="img-fluid" />
+            <img src="assets/book/4.jpeg" alt="" className="img-fluid" />
           </div>
           <div className="img">
             <img
-              src="assets/book/download1.jfif"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div className="img">
-            <img
-              src="assets/book/download2.jfif"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div className="img">
-            <img
-              src="assets/book/download3.jfif"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div className="img">
-            <img src="assets/book/guitar.jpg" alt="" className="img-fluid" />
-          </div>
-          <div className="img">
-            <img
-              src="assets/book/download2.jfif"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div className="img">
-            <img
-              src="assets/book/download3.jfif"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div className="img">
-            <img src="assets/book/guitar.jpg" alt="" className="img-fluid" />
-          </div>
-          <div className="img">
-            <img
-              src="assets/book/download2.jfif"
+              src="assets/book/5.jpeg"
               alt=""
               className="img-fluid"
             />

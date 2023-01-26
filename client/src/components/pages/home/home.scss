@@ -1,12 +1,17 @@
 @import "../../../global.scss";
 
 .home {
-  padding: 20px 40px;
+  padding: 20px 100px;
   margin: 0;
   background-color: $primary;
   overflow: hidden;
+  position: relative;
   @include mobile {
     padding: 20px;
+  }
+
+  &.active{
+    height: 100vh;
   }
 
   .top {
@@ -32,7 +37,7 @@
 
       .loginBtn {
         font-family: $roboto;
-        font-size: 20px;
+        font-size: 18px;
         color: $black;
         cursor: pointer;
         @include mobile {
@@ -41,11 +46,11 @@
       }
       .signupBtn {
         font-family: $roboto;
-        font-size: 20px;
+        font-size: 18px;
         color: white;
         background-color: $button;
         padding: 8px 20px;
-        border-radius: 10px;
+        border-radius: 8px;
         cursor: pointer;
         @include mobile {
           font-size: 16px;

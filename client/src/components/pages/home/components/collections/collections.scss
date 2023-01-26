@@ -10,11 +10,12 @@
   h1 {
     font-family: $lato;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 50px;
+    color: $black;
     @include mobile {
-      font-size: 30px;
+      font-size: 25px;
       margin-bottom: 30px;
     }
   }
@@ -28,7 +29,7 @@
       justify-content: center;
     }
     .img {
-      height: 250px;
+      height: 300px;
       width: 190px;
       @include mobile {
         height: 200px;
@@ -45,11 +46,12 @@
     color: $button;
     font-family: $lato;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 18px;
     border-radius: 10px;
     margin-top: 70px;
     @include mobile{
       margin-top: 40px;
+      font-size: 16px;
     }
   }
 }

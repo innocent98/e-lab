@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./customers.scss";
 import { Zoom, Slide } from "react-awesome-reveal";
 
-const Customers = () => {
+const Customers = ({ setSignup }) => {
   return (
     <div className="customers">
       <div className="wrapper">
@@ -18,7 +18,7 @@ const Customers = () => {
               Dolor sit amet, consectetur adipiscing elit. Ornare mauris duis a
               non. Arcu in fermentum mauris est, elementum
             </p>
-            <Link to="/register" className="link">
+            <Link to="" onClick={() => setSignup(true)} className="link">
               <div className="signupBtn">Sign up</div>
             </Link>
             <div className="app">

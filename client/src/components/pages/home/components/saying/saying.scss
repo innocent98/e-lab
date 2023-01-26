@@ -10,9 +10,10 @@
   h1 {
     font-family: $lato;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 40px;
+    color: $black;
     @include mobile {
-      font-size: 30px;
+      font-size: 25px;
       text-align: center;
     }
   }
@@ -29,17 +30,19 @@
     }
     p {
       font-family: $roboto;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 400;
-      @include mobile{font-size: 18px;}
+      text-align: center;
+      @include mobile{font-size: 16px;}
     }
     h4 {
       font-family: $roboto;
       font-weight: 700;
-      font-size: 24px;
+      font-size: 18px;
       margin-top: 30px;
+      text-align: center;
       @include mobile {
-        font-size: 20px;
+        font-size: 16px;
         margin-top: 20px;
       }
     }

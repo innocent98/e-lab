@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./choose.scss";
 import { Zoom, Slide } from "react-awesome-reveal";
 
-const Choose = () => {
+const Choose = ({ setSignup }) => {
   return (
     <div className="choose">
       <h1>
@@ -46,7 +46,7 @@ const Choose = () => {
         </Slide>
       </div>
 
-      <Link to="/register" className="link">
+      <Link to="" onClick={() => setSignup(true)} className="link">
         <div className="signupBtn">Sign Up</div>
       </Link>
     </div>

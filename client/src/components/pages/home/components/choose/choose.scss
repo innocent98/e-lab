@@ -11,12 +11,13 @@
   h1 {
     font-family: $lato;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 40px;
     text-align: center;
     width: 50%;
+    color: $black;
     @include mobile {
       width: 100%;
-      font-size: 30px;
+      font-size: 25px;
     }
   }
 
@@ -44,22 +45,22 @@
       p {
         font-family: $lato;
         font-weight: 300;
-        font-size: 24px;
+        font-size: 20px;
         color: $black;
         text-align: center;
         @include mobile {
-          font-size: 18px;
+          font-size: 16px;
         }
       }
       .link {
         color: $button;
         font-family: $lato;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 18px;
         text-align: center;
         margin-top: 20px;
         @include mobile {
-          font-size: 18px;
+          font-size: 14px;
           margin-top: 10px;
         }
       }
@@ -72,11 +73,11 @@
     font-family: $roboto;
     font-weight: 400;
     padding: 8px 20px;
-    font-size: 24px;
+    font-size: 18px;
     border-radius: 10px;
     margin-top: 70px;
     @include mobile{
-      font-size: 18px;
+      font-size: 16px;
       margin-top: 40px;
     }
   }

@@ -1,0 +1,76 @@
+@import "../../../../../global.scss";
+
+.options {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.438);
+
+  .option {
+    background-color: white;
+    height: 60%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 8px;
+    transition: all 1s ease;
+    animation: zoom 1s linear;
+    position: relative;
+    @include tab {
+      width: 85%;
+      padding: 20px;
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0.1);
+      }
+    }
+
+    .icon {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      cursor: pointer;
+    }
+
+    h3 {
+      text-align: center;
+      font-family: $roboto;
+      font-size: 25px;
+      font-weight: 700;
+      @include mobile{
+        font-size: 18px;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-family: $roboto;
+      font-size: 16px;
+    }
+
+    .link {
+      text-decoration: none;
+      background-color: $button;
+      color: white;
+      font-family: $roboto;
+      font-size: 16px;
+      padding: 10px;
+      width: 40%;
+      text-align: center;
+      margin: 8px;
+      border: none;
+      border-radius: 8px;
+    }
+  }
+}
