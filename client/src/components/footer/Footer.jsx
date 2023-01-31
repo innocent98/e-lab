@@ -48,6 +48,9 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+
+      <div className="divider"></div>
+      <div className="copyright">Copyright @ eLibrary 2022</div>
     </div>
   );
 };

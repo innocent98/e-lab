@@ -73,6 +73,13 @@ const slide = [
   },
 ];
 
+const list = [
+  { id: 1, text: "pique your interest", color: "#00F076" },
+  { id: 2, text: "widen your horizon", color: "#F2368C" },
+  { id: 3, text: "enhance your knowledge", color: "#00BEFF" },
+  { id: 4, text: "improve your vocabulary", color: "#FFE000" },
+];
+
 const Intro = ({ setSignup }) => {
   const [slider, setSlider] = useState(0);
   const [sliderM, setSliderM] = useState(0);
@@ -87,7 +94,35 @@ const Intro = ({ setSignup }) => {
 
   return (
     <div className="intro">
-      <div className="wrapper">
+      <div className="first-wrapper">
+        <h1>
+          eLibrary book <br /> store
+        </h1>
+        <div className="browse">
+          <p>Browse the collection of our books that would</p>
+          <div className="move">
+            {list.map((item) => (
+              <p style={{ color: item.color }} key={item.id}>
+                {item.text}
+              </p>
+            ))}
+          </div>
+        </div>
+        <div className="sign" onClick={() => setSignup(true)}>
+          Sign up
+        </div>
+      </div>
+
+      <div className="second-wrapper">
+        <h1>“Your future, our vision”</h1>
+        <p>
+          “Today a reader, tomorrow a leader." <br />
+          <span>– Margaret Fuller</span>
+        </p>
+        <img src="assets/book/Vector.png" alt="" className="vector" />
+      </div>
+
+      {/* <div className="wrapper">
         <div className="left">
           <Slide direction="left" triggerOnce>
             <h1>Books are a uniquely portable magic</h1>
@@ -152,7 +187,7 @@ const Intro = ({ setSignup }) => {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,0 +1,62 @@
+@import "../../../../../global.scss";
+
+.contact {
+  padding: 20px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 150px 0;
+  @include mobile{
+    padding: 20px;
+  }
+
+  h1 {
+    font-family: $dmsan;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  p {
+    font-family: $dmsan;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    input {
+      background-color: transparent;
+      border: 1px solid lightgray;
+      height: 50px;
+      &:focus {
+        outline: 1px solid lightgray;
+      }
+    }
+    textarea {
+      background-color: transparent;
+      border: 1px solid lightgray;
+      // height: 50px;
+      &:focus {
+        outline: 1px solid lightgray;
+      }
+    }
+
+    .sign {
+      padding: 8px 15px;
+      font-family: $dmsan;
+      font-weight: 400;
+      font-size: 16px;
+      border: none;
+      background-color: $secondary;
+      width: 200px;
+
+    }
+  }
+}

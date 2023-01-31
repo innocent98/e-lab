@@ -2,6 +2,8 @@
 
 .customers {
   margin-top: 100px;
+  padding: 20px 100px;
+  @include mobile{}
 
   .wrapper {
     display: flex;
