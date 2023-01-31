@@ -41,6 +41,13 @@ const Collections = () => {
               className="img-fluid"
             />
           </div>
+          <div className="img">
+            <img
+              src="assets/book/6.png"
+              alt=""
+              className="img-fluid"
+            />
+          </div>
         </div>
       </Slide>
 

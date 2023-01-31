@@ -26,6 +26,10 @@
   .left {
     flex: 1;
     padding-left: 100px;
+    display: flex;
+    img{
+      height: 300px;
+    }
     @include tab {
       padding-left: 20px;
       display: flex;
@@ -35,8 +39,13 @@
         height: 200px;
       }
     }
+    .group-1{
+      z-index: 1;
+    }
     .group-2 {
       margin-left: -40px;
+      height: 200px;
+      margin-top: 40px;
       @include tab {
         height: 100px;
         margin-left: 0;

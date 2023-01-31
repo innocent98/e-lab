@@ -4,7 +4,7 @@ const MockUp = () => {
   return (
     <div className="mock-up">
       <div className="left">
-        <img src="assets/book/group1.png" alt="" />
+        <img src="assets/book/group1.png" alt="" className="group-1" />
         <img src="assets/book/group2.png" alt="" className="group-2" />
       </div>
       <div className="right">
