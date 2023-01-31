@@ -9,6 +9,7 @@ import Footer from "../../footer/Footer";
 import RegistrationOptions from "./components/registerationOptions/RegistrationOptions";
 import { useState } from "react";
 import Contact from "./components/contact/Contact";
+import MockUp from "./components/mockUp/MockUp";
 
 export default function Home() {
   const [signup, setSignup] = useState(false);
@@ -30,6 +31,7 @@ export default function Home() {
         </div>
         <Intro setSignup={setSignup} />
         <Collections />
+        <MockUp />
         <Choose setSignup={setSignup} />
         {/* <Saying /> */}
         {/* <Customers setSignup={setSignup} /> */}

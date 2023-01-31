@@ -7,6 +7,7 @@ $lato: "Lato", sans-serif;
 $roboto: "Roboto", sans-serif;
 $dmsan: "DM Sans", sans-serif;
 
+$smWidth: 420px;
 $mobWidth: 480px;
 $tabWidth: 768px;
 $lWidth: 1024px;
@@ -32,6 +33,12 @@ $xlWidth: 1200px;
     @content;
   }
 }
+@mixin sm {
+  @media (max-width: #{$smWidth}) {
+    @content;
+  }
+}
+
 
 #error-page {
   width: 100%;
@@ -41,3 +48,9 @@ $xlWidth: 1200px;
   align-items: center;
   height: 100vh;
 }
+
+
+// DB4C77
+// 10559A
+// 3CA2C8
+// #306754

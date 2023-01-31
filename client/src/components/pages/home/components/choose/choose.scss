@@ -7,10 +7,21 @@
   justify-content: center;
   align-items: center;
   margin-top: 80px;
+  position: relative;
   @include tab {
     // margin-top: 100px;
     padding: 20px;
   }
+
+  .vector{
+    position: absolute;
+    top: 0;
+    right: 20%;
+  }
+  @include mobile{
+    // display: none;
+  }
+
   h1 {
     font-family: $dmsan;
     font-weight: 700;

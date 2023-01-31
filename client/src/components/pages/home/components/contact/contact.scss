@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   margin: 150px 0;
-  @include mobile{
+  @include tab{
     padding: 20px;
   }
 

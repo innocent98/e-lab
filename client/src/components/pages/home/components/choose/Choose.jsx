@@ -5,6 +5,7 @@ import { Zoom, Slide } from "react-awesome-reveal";
 const Choose = ({ setSignup }) => {
   return (
     <div className="choose">
+        <img src="assets/book/vector.png" alt="" className="vector" />
       <h1>
         <Zoom triggerOnce>Key reasons to choose us over others</Zoom>
       </h1>

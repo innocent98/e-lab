@@ -33,10 +33,13 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: center;  
+      justify-content: center;
       gap: 10px;
       height: 50px;
       overflow: hidden;
+      @include sm {
+        height: 70px;
+      }
       p {
         font-family: $dmsan;
         font-size: 24px;
@@ -51,15 +54,18 @@
       .move {
         height: 100%;
         animation: move 10s ease-in-out infinite alternate;
-        @include mobile{
+        @include tab {
           margin-top: 15px;
+        }
+        @include sm {
+          display: none;
         }
         p {
           text-align: left;
           font-family: $dmsan;
           font-size: 24px;
           font-weight: 400;
-          @include mobile{
+          @include tab {
             text-align: center;
           }
         }
@@ -88,9 +94,12 @@
       padding: 8px 15px;
       cursor: pointer;
       color: #000;
-      @include mobile{
+      @include mobile {
         margin-top: 10px;
       }
+      // @include sm {
+      //   margin-top: 45px;
+      // }
     }
   }
 
